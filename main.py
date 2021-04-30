@@ -1,7 +1,6 @@
 from os import system
-import random
 from classes.pieces import *
-from time import sleep
+from time import sleep 
 import re
 
 def grid_pieces(grid, x, y):
@@ -17,7 +16,6 @@ def grid_pieces(grid, x, y):
     return "#"
 
 def get_object(grid, coord):
-    pieces = "abcdefgh"
     colours = ["white", "black"]
     for c in range(0, 2): # Is the colour of the grid data structure (white / black)
         for p in range(0, len(grid[colours[c]])):
@@ -35,8 +33,6 @@ def get_index(grid, piece):
                 return p
 
 def print_grid(grid):
-    pieces = "abcdefgh"
-    colours = ["white", "black"]
     for row in range(7, -1, -1):
         print(row+1, end=' | ')
         for column in range(0, 8): # Sets up printing an 8*8 board
